@@ -1,7 +1,7 @@
 const curso = document.querySelector(".cursor");
 var timeout;
 
-//cursor movement
+// Cursor movement
 document.addEventListener("mousemove", (e) => {
   let x = e.pageX;
   let y = e.pageY;
@@ -10,12 +10,12 @@ document.addEventListener("mousemove", (e) => {
   curso.style.left = x + "px";
   curso.style.display = "block";
 
-  //hide animation
+  // Hide animation
   clearTimeout(timeout);
   timeout = setTimeout(mouseStopped, 1000);
 });
 
-//hide animation when cursor off the screen
+// Hide animation when cursor off the screen
 
 document.addEventListener("mouseout", () => {
   curso.style.display = "none";
